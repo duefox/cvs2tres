@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="StatusEffectData" load_steps=5 format=3 uid="uid://7v78qad5xplw"]
+
+[ext_resource type="Texture2D" uid="uid://d2vfa5d3upr0f" path="res://assets/stats.png" id="1_rpj25"]
+[ext_resource type="Script" uid="uid://dkxxf21gkkhr4" path="res://resource/core/types/status_effect_data.gd" id="2_oi4be"]
+[ext_resource type="Script" uid="uid://7jypaqh1s6xd" path="res://resource/core/types/skill_resource_change.gd" id="3_2by1a"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rpj25"]
+atlas = ExtResource("1_rpj25")
+region = Rect2(0, 0, 32, 32)
+
+[resource]
+script = ExtResource("2_oi4be")
+item_id = &"b151"
+private_name = "freeze"
+nickname = "b151_title"
+descrip = "b151_descp"
+icon = SubResource("AtlasTexture_rpj25")
+effect_type = 3

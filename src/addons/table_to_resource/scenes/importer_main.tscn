@@ -1,0 +1,571 @@
+[gd_scene load_steps=19 format=3 uid="uid://b0n8u17ci83k8"]
+
+[ext_resource type="Script" uid="uid://cmars4nxhm7tv" path="res://addons/table_to_resource/scenes/importer_main.gd" id="1_dxw70"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_wi548"]
+texture_margin_left = 6.0
+texture_margin_top = 6.0
+texture_margin_right = 6.0
+texture_margin_bottom = 6.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_dxw70"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(1, 0.365, 0.365, 1)
+draw_center = false
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+corner_detail = 1
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_iq7y3"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_1ttxb"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_i4h1f"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_2gxf0"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_q5iyv"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ckkn0"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_3yc1s"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_o111l"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_wm2q8"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_e1lgf"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_bgbk0"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_rhcuf"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_f8nqh"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_gs6h4"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_tarxa"]
+
+[node name="CsvImporterMain" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_dxw70")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+
+[node name="TabMargin" type="MarginContainer" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+mouse_filter = 2
+theme_override_constants/margin_left = 12
+theme_override_constants/margin_top = 12
+theme_override_constants/margin_right = 12
+theme_override_constants/margin_bottom = 12
+
+[node name="TabBar" type="TabBar" parent="MarginContainer/VBoxContainer/TabMargin"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(640, 0)
+layout_mode = 2
+current_tab = 0
+tab_count = 2
+tab_0/title = "csv导出tres"
+tab_1/title = "tres导出csv"
+
+[node name="PanelMargin" type="MarginContainer" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="ToCvsPanel" type="Panel" parent="MarginContainer/VBoxContainer/PanelMargin"]
+unique_name_in_owner = true
+visible = false
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/VBoxContainer/PanelMargin/ToCvsPanel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 16
+theme_override_constants/margin_right = 16
+theme_override_constants/margin_bottom = 16
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/VBoxContainer/PanelMargin/ToCvsPanel/MarginContainer"]
+layout_mode = 2
+
+[node name="TextMargin" type="MarginContainer" parent="MarginContainer/VBoxContainer/PanelMargin/ToCvsPanel/MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/VBoxContainer/PanelMargin/ToCvsPanel/MarginContainer/VBoxContainer/TextMargin"]
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/VBoxContainer/PanelMargin/ToCvsPanel/MarginContainer/VBoxContainer/TextMargin/VBoxContainer"]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/VBoxContainer/PanelMargin/ToCvsPanel/MarginContainer/VBoxContainer/TextMargin/VBoxContainer/MarginContainer"]
+layout_mode = 2
+
+[node name="FuncLabel" type="Label" parent="MarginContainer/VBoxContainer/PanelMargin/ToCvsPanel/MarginContainer/VBoxContainer/TextMargin/VBoxContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_colors/font_color = Color(1, 1, 0, 1)
+theme_override_font_sizes/font_size = 36
+text = "功能：将Resource 资源文件 (.tres)导出为CSV的表格数据"
+
+[node name="TipsLabel" type="Label" parent="MarginContainer/VBoxContainer/PanelMargin/ToCvsPanel/MarginContainer/VBoxContainer/TextMargin/VBoxContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+text = "Tips：请正确设置需要批量导出的资源文件夹、csv表格输出文件夹；假若需做类名映射请设置扫描路径"
+
+[node name="ContentMargin" type="MarginContainer" parent="MarginContainer/VBoxContainer/PanelMargin/ToCvsPanel/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/margin_top = 16
+theme_override_constants/margin_bottom = 16
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/VBoxContainer/PanelMargin/ToCvsPanel/MarginContainer/VBoxContainer/ContentMargin"]
+layout_mode = 2
+
+[node name="ImporterMargin" type="MarginContainer" parent="MarginContainer/VBoxContainer/PanelMargin/ToCvsPanel/MarginContainer/VBoxContainer/ContentMargin/VBoxContainer"]
+layout_mode = 2
+
+[node name="PanelContainer" type="PanelContainer" parent="MarginContainer/VBoxContainer/PanelMargin/ToCvsPanel/MarginContainer/VBoxContainer/ContentMargin/VBoxContainer/ImporterMargin"]
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer/PanelMargin/ToCvsPanel/MarginContainer/VBoxContainer/ContentMargin/VBoxContainer/ImporterMargin/PanelContainer"]
+layout_mode = 2
+theme_override_constants/separation = 8
+alignment = 1
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/PanelMargin/ToCvsPanel/MarginContainer/VBoxContainer/ContentMargin/VBoxContainer/ImporterMargin/PanelContainer/HBoxContainer"]
+custom_minimum_size = Vector2(192, 0)
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+text = "资源路径："
+
+[node name="TresPath" type="LineEdit" parent="MarginContainer/VBoxContainer/PanelMargin/ToCvsPanel/MarginContainer/VBoxContainer/ContentMargin/VBoxContainer/ImporterMargin/PanelContainer/HBoxContainer"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 64)
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_placeholder_color = Color(0.4, 0.4, 0.4, 1)
+placeholder_text = "请浏览资源路径（注意需要是同类型资源）"
+
+[node name="BtnTresBrowse" type="Button" parent="MarginContainer/VBoxContainer/PanelMargin/ToCvsPanel/MarginContainer/VBoxContainer/ContentMargin/VBoxContainer/ImporterMargin/PanelContainer/HBoxContainer"]
+custom_minimum_size = Vector2(96, 0)
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxTexture_wi548")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_dxw70")
+theme_override_styles/hover = SubResource("StyleBoxFlat_dxw70")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_dxw70")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_iq7y3")
+text = "浏览"
+
+[node name="OutputMargin" type="MarginContainer" parent="MarginContainer/VBoxContainer/PanelMargin/ToCvsPanel/MarginContainer/VBoxContainer/ContentMargin/VBoxContainer"]
+layout_mode = 2
+
+[node name="PanelContainer" type="PanelContainer" parent="MarginContainer/VBoxContainer/PanelMargin/ToCvsPanel/MarginContainer/VBoxContainer/ContentMargin/VBoxContainer/OutputMargin"]
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer/PanelMargin/ToCvsPanel/MarginContainer/VBoxContainer/ContentMargin/VBoxContainer/OutputMargin/PanelContainer"]
+layout_mode = 2
+theme_override_constants/separation = 8
+alignment = 1
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/PanelMargin/ToCvsPanel/MarginContainer/VBoxContainer/ContentMargin/VBoxContainer/OutputMargin/PanelContainer/HBoxContainer"]
+custom_minimum_size = Vector2(192, 0)
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+text = "导出名称："
+
+[node name="OutputPath" type="LineEdit" parent="MarginContainer/VBoxContainer/PanelMargin/ToCvsPanel/MarginContainer/VBoxContainer/ContentMargin/VBoxContainer/OutputMargin/PanelContainer/HBoxContainer"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 64)
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_placeholder_color = Color(0.4, 0.4, 0.4, 1)
+placeholder_text = "请设置导出csv文件的路径和名称"
+
+[node name="BtnOutputSetting" type="Button" parent="MarginContainer/VBoxContainer/PanelMargin/ToCvsPanel/MarginContainer/VBoxContainer/ContentMargin/VBoxContainer/OutputMargin/PanelContainer/HBoxContainer"]
+custom_minimum_size = Vector2(96, 0)
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxTexture_wi548")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_dxw70")
+theme_override_styles/hover = SubResource("StyleBoxFlat_dxw70")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_dxw70")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_1ttxb")
+text = "设置"
+
+[node name="ScanMargin" type="MarginContainer" parent="MarginContainer/VBoxContainer/PanelMargin/ToCvsPanel/MarginContainer/VBoxContainer/ContentMargin/VBoxContainer"]
+layout_mode = 2
+
+[node name="PanelContainer" type="PanelContainer" parent="MarginContainer/VBoxContainer/PanelMargin/ToCvsPanel/MarginContainer/VBoxContainer/ContentMargin/VBoxContainer/ScanMargin"]
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer/PanelMargin/ToCvsPanel/MarginContainer/VBoxContainer/ContentMargin/VBoxContainer/ScanMargin/PanelContainer"]
+layout_mode = 2
+theme_override_constants/separation = 8
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/PanelMargin/ToCvsPanel/MarginContainer/VBoxContainer/ContentMargin/VBoxContainer/ScanMargin/PanelContainer/HBoxContainer"]
+custom_minimum_size = Vector2(192, 0)
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+text = "类映射路径："
+
+[node name="OutputClassMapPath" type="TextEdit" parent="MarginContainer/VBoxContainer/PanelMargin/ToCvsPanel/MarginContainer/VBoxContainer/ContentMargin/VBoxContainer/ScanMargin/PanelContainer/HBoxContainer"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 64)
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_placeholder_color = Color(0.4, 0.4, 0.4, 1)
+text = "res://addons/table_to_resource/core/class_map.json"
+placeholder_text = "请更新需要扫描的类映射文件夹路径（假若没有需要映射的类请默认留空，非必须）"
+
+[node name="BtnOutputScan" type="Button" parent="MarginContainer/VBoxContainer/PanelMargin/ToCvsPanel/MarginContainer/VBoxContainer/ContentMargin/VBoxContainer/ScanMargin/PanelContainer/HBoxContainer"]
+custom_minimum_size = Vector2(96, 0)
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxTexture_wi548")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_dxw70")
+theme_override_styles/hover = SubResource("StyleBoxFlat_dxw70")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_dxw70")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_i4h1f")
+text = "更新"
+
+[node name="BtnsMargin" type="MarginContainer" parent="MarginContainer/VBoxContainer/PanelMargin/ToCvsPanel/MarginContainer/VBoxContainer/ContentMargin/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/margin_top = 32
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer/PanelMargin/ToCvsPanel/MarginContainer/VBoxContainer/ContentMargin/VBoxContainer/BtnsMargin"]
+layout_mode = 2
+alignment = 1
+
+[node name="BtnOutputCVS" type="Button" parent="MarginContainer/VBoxContainer/PanelMargin/ToCvsPanel/MarginContainer/VBoxContainer/ContentMargin/VBoxContainer/BtnsMargin/HBoxContainer"]
+custom_minimum_size = Vector2(192, 48)
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxTexture_wi548")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_dxw70")
+theme_override_styles/hover = SubResource("StyleBoxFlat_dxw70")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_dxw70")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_2gxf0")
+text = "导出CSV表格"
+
+[node name="ToTresPanel" type="Panel" parent="MarginContainer/VBoxContainer/PanelMargin"]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/VBoxContainer/PanelMargin/ToTresPanel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 16
+theme_override_constants/margin_top = 16
+theme_override_constants/margin_right = 16
+theme_override_constants/margin_bottom = 16
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/VBoxContainer/PanelMargin/ToTresPanel/MarginContainer"]
+layout_mode = 2
+
+[node name="TextMargin" type="MarginContainer" parent="MarginContainer/VBoxContainer/PanelMargin/ToTresPanel/MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/VBoxContainer/PanelMargin/ToTresPanel/MarginContainer/VBoxContainer/TextMargin"]
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/VBoxContainer/PanelMargin/ToTresPanel/MarginContainer/VBoxContainer/TextMargin/VBoxContainer"]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/VBoxContainer/PanelMargin/ToTresPanel/MarginContainer/VBoxContainer/TextMargin/VBoxContainer/MarginContainer"]
+layout_mode = 2
+
+[node name="FuncLabel" type="Label" parent="MarginContainer/VBoxContainer/PanelMargin/ToTresPanel/MarginContainer/VBoxContainer/TextMargin/VBoxContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_colors/font_color = Color(1, 1, 0, 1)
+theme_override_font_sizes/font_size = 36
+text = "功能：将 CSV 表格按行转换为指定的 Resource 资源文件 (.tres)"
+
+[node name="TipsLabel" type="Label" parent="MarginContainer/VBoxContainer/PanelMargin/ToTresPanel/MarginContainer/VBoxContainer/TextMargin/VBoxContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+text = "Tips：请正确设置导出文件夹以及csv中（如id）唯一索引作为保存的资源文件名"
+
+[node name="ContentMargin" type="MarginContainer" parent="MarginContainer/VBoxContainer/PanelMargin/ToTresPanel/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/margin_top = 16
+theme_override_constants/margin_bottom = 16
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/VBoxContainer/PanelMargin/ToTresPanel/MarginContainer/VBoxContainer/ContentMargin"]
+layout_mode = 2
+
+[node name="ImporterMargin" type="MarginContainer" parent="MarginContainer/VBoxContainer/PanelMargin/ToTresPanel/MarginContainer/VBoxContainer/ContentMargin/VBoxContainer"]
+layout_mode = 2
+
+[node name="PanelContainer" type="PanelContainer" parent="MarginContainer/VBoxContainer/PanelMargin/ToTresPanel/MarginContainer/VBoxContainer/ContentMargin/VBoxContainer/ImporterMargin"]
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer/PanelMargin/ToTresPanel/MarginContainer/VBoxContainer/ContentMargin/VBoxContainer/ImporterMargin/PanelContainer"]
+layout_mode = 2
+theme_override_constants/separation = 8
+alignment = 1
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/PanelMargin/ToTresPanel/MarginContainer/VBoxContainer/ContentMargin/VBoxContainer/ImporterMargin/PanelContainer/HBoxContainer"]
+custom_minimum_size = Vector2(192, 0)
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+text = "表格路径："
+
+[node name="ImporterPath" type="LineEdit" parent="MarginContainer/VBoxContainer/PanelMargin/ToTresPanel/MarginContainer/VBoxContainer/ContentMargin/VBoxContainer/ImporterMargin/PanelContainer/HBoxContainer"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 64)
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_placeholder_color = Color(0.4, 0.4, 0.4, 1)
+placeholder_text = "请输入导入csv文件的路径"
+
+[node name="BtnImporter" type="Button" parent="MarginContainer/VBoxContainer/PanelMargin/ToTresPanel/MarginContainer/VBoxContainer/ContentMargin/VBoxContainer/ImporterMargin/PanelContainer/HBoxContainer"]
+custom_minimum_size = Vector2(96, 0)
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxTexture_wi548")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_dxw70")
+theme_override_styles/hover = SubResource("StyleBoxFlat_dxw70")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_dxw70")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_q5iyv")
+text = "导入"
+
+[node name="RelatedMargin" type="MarginContainer" parent="MarginContainer/VBoxContainer/PanelMargin/ToTresPanel/MarginContainer/VBoxContainer/ContentMargin/VBoxContainer"]
+layout_mode = 2
+
+[node name="PanelContainer" type="PanelContainer" parent="MarginContainer/VBoxContainer/PanelMargin/ToTresPanel/MarginContainer/VBoxContainer/ContentMargin/VBoxContainer/RelatedMargin"]
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer/PanelMargin/ToTresPanel/MarginContainer/VBoxContainer/ContentMargin/VBoxContainer/RelatedMargin/PanelContainer"]
+layout_mode = 2
+theme_override_constants/separation = 8
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/PanelMargin/ToTresPanel/MarginContainer/VBoxContainer/ContentMargin/VBoxContainer/RelatedMargin/PanelContainer/HBoxContainer"]
+custom_minimum_size = Vector2(192, 0)
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+text = "资源类："
+
+[node name="RelatedPath" type="LineEdit" parent="MarginContainer/VBoxContainer/PanelMargin/ToTresPanel/MarginContainer/VBoxContainer/ContentMargin/VBoxContainer/RelatedMargin/PanelContainer/HBoxContainer"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 64)
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_placeholder_color = Color(0.4, 0.4, 0.4, 1)
+placeholder_text = "请设置关联的资源类（tres文件关联的gd脚本）"
+
+[node name="BtnRelated" type="Button" parent="MarginContainer/VBoxContainer/PanelMargin/ToTresPanel/MarginContainer/VBoxContainer/ContentMargin/VBoxContainer/RelatedMargin/PanelContainer/HBoxContainer"]
+custom_minimum_size = Vector2(96, 0)
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxTexture_wi548")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_dxw70")
+theme_override_styles/hover = SubResource("StyleBoxFlat_dxw70")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_dxw70")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_ckkn0")
+text = "关联"
+
+[node name="ExporterMargin" type="MarginContainer" parent="MarginContainer/VBoxContainer/PanelMargin/ToTresPanel/MarginContainer/VBoxContainer/ContentMargin/VBoxContainer"]
+layout_mode = 2
+
+[node name="PanelContainer" type="PanelContainer" parent="MarginContainer/VBoxContainer/PanelMargin/ToTresPanel/MarginContainer/VBoxContainer/ContentMargin/VBoxContainer/ExporterMargin"]
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer/PanelMargin/ToTresPanel/MarginContainer/VBoxContainer/ContentMargin/VBoxContainer/ExporterMargin/PanelContainer"]
+layout_mode = 2
+theme_override_constants/separation = 8
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/PanelMargin/ToTresPanel/MarginContainer/VBoxContainer/ContentMargin/VBoxContainer/ExporterMargin/PanelContainer/HBoxContainer"]
+custom_minimum_size = Vector2(192, 0)
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+text = "导出路径："
+
+[node name="EmporterPath" type="TextEdit" parent="MarginContainer/VBoxContainer/PanelMargin/ToTresPanel/MarginContainer/VBoxContainer/ContentMargin/VBoxContainer/ExporterMargin/PanelContainer/HBoxContainer"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 64)
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_placeholder_color = Color(0.4, 0.4, 0.4, 1)
+placeholder_text = "请设置导出资源的文件夹路径"
+
+[node name="BtnEmporter" type="Button" parent="MarginContainer/VBoxContainer/PanelMargin/ToTresPanel/MarginContainer/VBoxContainer/ContentMargin/VBoxContainer/ExporterMargin/PanelContainer/HBoxContainer"]
+custom_minimum_size = Vector2(96, 0)
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxTexture_wi548")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_dxw70")
+theme_override_styles/hover = SubResource("StyleBoxFlat_dxw70")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_dxw70")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_3yc1s")
+text = "设置"
+
+[node name="ScanMargin" type="MarginContainer" parent="MarginContainer/VBoxContainer/PanelMargin/ToTresPanel/MarginContainer/VBoxContainer/ContentMargin/VBoxContainer"]
+layout_mode = 2
+
+[node name="PanelContainer" type="PanelContainer" parent="MarginContainer/VBoxContainer/PanelMargin/ToTresPanel/MarginContainer/VBoxContainer/ContentMargin/VBoxContainer/ScanMargin"]
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer/PanelMargin/ToTresPanel/MarginContainer/VBoxContainer/ContentMargin/VBoxContainer/ScanMargin/PanelContainer"]
+layout_mode = 2
+theme_override_constants/separation = 8
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/PanelMargin/ToTresPanel/MarginContainer/VBoxContainer/ContentMargin/VBoxContainer/ScanMargin/PanelContainer/HBoxContainer"]
+custom_minimum_size = Vector2(192, 0)
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+text = "类映射路径："
+
+[node name="ClassMapPath" type="TextEdit" parent="MarginContainer/VBoxContainer/PanelMargin/ToTresPanel/MarginContainer/VBoxContainer/ContentMargin/VBoxContainer/ScanMargin/PanelContainer/HBoxContainer"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 64)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+theme_override_colors/font_placeholder_color = Color(0.4, 0.4, 0.4, 1)
+text = "res://addons/table_to_resource/core/class_map.json"
+placeholder_text = "请更新需要扫描的类映射文件夹路径（假若没有需要映射的类请默认留空，非必须）"
+
+[node name="BtnScan" type="Button" parent="MarginContainer/VBoxContainer/PanelMargin/ToTresPanel/MarginContainer/VBoxContainer/ContentMargin/VBoxContainer/ScanMargin/PanelContainer/HBoxContainer"]
+custom_minimum_size = Vector2(96, 0)
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxTexture_wi548")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_dxw70")
+theme_override_styles/hover = SubResource("StyleBoxFlat_dxw70")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_dxw70")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_o111l")
+text = "更新"
+
+[node name="SettingMargin" type="MarginContainer" parent="MarginContainer/VBoxContainer/PanelMargin/ToTresPanel/MarginContainer/VBoxContainer/ContentMargin/VBoxContainer"]
+layout_mode = 2
+
+[node name="PanelContainer" type="PanelContainer" parent="MarginContainer/VBoxContainer/PanelMargin/ToTresPanel/MarginContainer/VBoxContainer/ContentMargin/VBoxContainer/SettingMargin"]
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer/PanelMargin/ToTresPanel/MarginContainer/VBoxContainer/ContentMargin/VBoxContainer/SettingMargin/PanelContainer"]
+layout_mode = 2
+theme_override_constants/separation = 8
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/PanelMargin/ToTresPanel/MarginContainer/VBoxContainer/ContentMargin/VBoxContainer/SettingMargin/PanelContainer/HBoxContainer"]
+custom_minimum_size = Vector2(192, 0)
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+text = "文  件  名："
+
+[node name="IdOptionBtn" type="OptionButton" parent="MarginContainer/VBoxContainer/PanelMargin/ToTresPanel/MarginContainer/VBoxContainer/ContentMargin/VBoxContainer/SettingMargin/PanelContainer/HBoxContainer"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(256, 64)
+layout_mode = 2
+
+[node name="ButtonTip" type="Button" parent="MarginContainer/VBoxContainer/PanelMargin/ToTresPanel/MarginContainer/VBoxContainer/ContentMargin/VBoxContainer/SettingMargin/PanelContainer/HBoxContainer"]
+layout_mode = 2
+tooltip_text = "导出文件名，建议设置为唯一索引的字段（如ID)"
+theme_override_colors/font_color = Color(0, 1, 0, 1)
+theme_override_font_sizes/font_size = 44
+theme_override_styles/normal = SubResource("StyleBoxEmpty_wm2q8")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_e1lgf")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_bgbk0")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_rhcuf")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_f8nqh")
+text = "？"
+
+[node name="BtnExecute" type="Button" parent="MarginContainer/VBoxContainer/PanelMargin/ToTresPanel/MarginContainer/VBoxContainer/ContentMargin/VBoxContainer/SettingMargin/PanelContainer/HBoxContainer"]
+custom_minimum_size = Vector2(128, 0)
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxTexture_wi548")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_dxw70")
+theme_override_styles/hover = SubResource("StyleBoxFlat_dxw70")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_dxw70")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_gs6h4")
+text = "批量创建"
+
+[node name="BtnUpdate" type="Button" parent="MarginContainer/VBoxContainer/PanelMargin/ToTresPanel/MarginContainer/VBoxContainer/ContentMargin/VBoxContainer/SettingMargin/PanelContainer/HBoxContainer"]
+custom_minimum_size = Vector2(128, 0)
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxTexture_wi548")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_dxw70")
+theme_override_styles/hover = SubResource("StyleBoxFlat_dxw70")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_dxw70")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_tarxa")
+text = "批量更新"
+
+[node name="LogMargin" type="MarginContainer" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 8
+theme_override_constants/margin_left = 16
+theme_override_constants/margin_top = 16
+theme_override_constants/margin_right = 16
+
+[node name="PanelContainer" type="PanelContainer" parent="MarginContainer/VBoxContainer/LogMargin"]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/VBoxContainer/LogMargin/PanelContainer"]
+layout_mode = 2
+theme_override_constants/separation = 16
+
+[node name="TextMargin" type="MarginContainer" parent="MarginContainer/VBoxContainer/LogMargin/PanelContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/LogMargin/PanelContainer/VBoxContainer/TextMargin"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+text = "生成日志："
+
+[node name="LogMargin" type="MarginContainer" parent="MarginContainer/VBoxContainer/LogMargin/PanelContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="ScrollContainer" type="ScrollContainer" parent="MarginContainer/VBoxContainer/LogMargin/PanelContainer/VBoxContainer/LogMargin"]
+custom_minimum_size = Vector2(0, 300)
+layout_mode = 2
+
+[node name="LogLabel" type="RichTextLabel" parent="MarginContainer/VBoxContainer/LogMargin/PanelContainer/VBoxContainer/LogMargin/ScrollContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/default_color = Color(1, 1, 1, 1)
+theme_override_colors/selection_color = Color(1, 1, 1, 0.8)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+fit_content = true
+
+[connection signal="tab_clicked" from="MarginContainer/VBoxContainer/TabMargin/TabBar" to="." method="_on_tab_bar_tab_clicked"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/PanelMargin/ToCvsPanel/MarginContainer/VBoxContainer/ContentMargin/VBoxContainer/ImporterMargin/PanelContainer/HBoxContainer/BtnTresBrowse" to="." method="_on_btn_tres_browse_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/PanelMargin/ToCvsPanel/MarginContainer/VBoxContainer/ContentMargin/VBoxContainer/OutputMargin/PanelContainer/HBoxContainer/BtnOutputSetting" to="." method="_on_btn_output_setting_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/PanelMargin/ToCvsPanel/MarginContainer/VBoxContainer/ContentMargin/VBoxContainer/ScanMargin/PanelContainer/HBoxContainer/BtnOutputScan" to="." method="_on_btn_output_scan_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/PanelMargin/ToCvsPanel/MarginContainer/VBoxContainer/ContentMargin/VBoxContainer/BtnsMargin/HBoxContainer/BtnOutputCVS" to="." method="_on_btn_output_cvs_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/PanelMargin/ToTresPanel/MarginContainer/VBoxContainer/ContentMargin/VBoxContainer/ImporterMargin/PanelContainer/HBoxContainer/BtnImporter" to="." method="_on_btn_importer_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/PanelMargin/ToTresPanel/MarginContainer/VBoxContainer/ContentMargin/VBoxContainer/RelatedMargin/PanelContainer/HBoxContainer/BtnRelated" to="." method="_on_btn_related_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/PanelMargin/ToTresPanel/MarginContainer/VBoxContainer/ContentMargin/VBoxContainer/ExporterMargin/PanelContainer/HBoxContainer/BtnEmporter" to="." method="_on_btn_emporter_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/PanelMargin/ToTresPanel/MarginContainer/VBoxContainer/ContentMargin/VBoxContainer/ScanMargin/PanelContainer/HBoxContainer/BtnScan" to="." method="_on_btn_scan_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/PanelMargin/ToTresPanel/MarginContainer/VBoxContainer/ContentMargin/VBoxContainer/SettingMargin/PanelContainer/HBoxContainer/BtnExecute" to="." method="_on_btn_execute_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/PanelMargin/ToTresPanel/MarginContainer/VBoxContainer/ContentMargin/VBoxContainer/SettingMargin/PanelContainer/HBoxContainer/BtnUpdate" to="." method="_on_btn_update_pressed"]

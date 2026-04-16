@@ -1,0 +1,4 @@
+﻿item_id,private_name,save_name,nickname,descrip,icon,effect_type,max_stacks,stack_decay_per_turn,target_attribute,modifier_type,strength_value,damage_type,scale_with_skill_level,列1,列2,列3,列4,列5
+b151,freeze,b151_freeze,b151_title,b151_descp,"res://assets/stats.png:0,0,32,32",FREEZE,1.0 ,0,,NONE,,NORMAL,false,,,,,
+b152,bleed,b152_bleed,b152_title,b152_descp,"res://assets/stats.png:32,0,32,32",BLEED,1.0 ,1,hit_points,PERCENTAGE,1%,TRUE_DAMAGE,false,,,,,
+b153,poison,b153_poison,b153_title,b153_descp,"res://assets/stats.png:64,0,32,32",POISON,1.0 ,1,hit_points,FLAT,10,IGNORE_ARMOR,false,,,,,

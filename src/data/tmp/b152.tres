@@ -1,0 +1,23 @@
+[gd_resource type="Resource" script_class="StatusEffectData" load_steps=5 format=3 uid="uid://b5nejijndw8ra"]
+
+[ext_resource type="Texture2D" uid="uid://d2vfa5d3upr0f" path="res://assets/stats.png" id="1_hmtxv"]
+[ext_resource type="Script" uid="uid://dkxxf21gkkhr4" path="res://resource/core/types/status_effect_data.gd" id="2_dnp6s"]
+[ext_resource type="Script" uid="uid://7jypaqh1s6xd" path="res://resource/core/types/skill_resource_change.gd" id="3_eh5ig"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hmtxv"]
+atlas = ExtResource("1_hmtxv")
+region = Rect2(32, 0, 32, 32)
+
+[resource]
+script = ExtResource("2_dnp6s")
+item_id = &"b152"
+private_name = "bleed"
+nickname = "b152_title"
+descrip = "b152_descp"
+icon = SubResource("AtlasTexture_hmtxv")
+effect_type = 5
+stack_decay_per_turn = 1
+target_attribute = "hit_points"
+modifier_type = 2
+strength_value = 1.0
+damage_type = 2

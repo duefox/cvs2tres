@@ -1,0 +1,5 @@
+{
+	"SkillEffectApplyParams": "G:/Projects/gd.prj/addons/cvs2res/resource/core/types/skill_effect_apply_params.gd",
+	"SkillResourceChange": "G:/Projects/gd.prj/addons/cvs2res/resource/core/types/skill_resource_change.gd",
+	"StatusEffectData": "G:/Projects/gd.prj/addons/cvs2res/resource/core/types/status_effect_data.gd"
+}

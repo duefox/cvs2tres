@@ -1,0 +1,17 @@
+[remap]
+
+importer="csv_translation"
+type="Translation"
+uid="uid://c5ox2rdaeqslw"
+
+[deps]
+
+files=["res://csv/buffs_effect.private.translation", "res://csv/buffs_effect.save.translation", "res://csv/buffs_effect.nickname.translation", "res://csv/buffs_effect.descrip.translation", "res://csv/buffs_effect.icon.translation", "res://csv/buffs_effect.effect.translation", "res://csv/buffs_effect.max.translation", "res://csv/buffs_effect.stack.translation", "res://csv/buffs_effect.target.translation", "res://csv/buffs_effect.modifier.translation", "res://csv/buffs_effect.strength.translation", "res://csv/buffs_effect.damage.translation", "res://csv/buffs_effect.scale.translation", "res://csv/buffs_effect.列1.translation", "res://csv/buffs_effect.列2.translation", "res://csv/buffs_effect.列3.translation", "res://csv/buffs_effect.列4.translation", "res://csv/buffs_effect.列5.translation"]
+
+source_file="res://csv/buffs_effect.csv"
+dest_files=["res://csv/buffs_effect.private.translation", "res://csv/buffs_effect.save.translation", "res://csv/buffs_effect.nickname.translation", "res://csv/buffs_effect.descrip.translation", "res://csv/buffs_effect.icon.translation", "res://csv/buffs_effect.effect.translation", "res://csv/buffs_effect.max.translation", "res://csv/buffs_effect.stack.translation", "res://csv/buffs_effect.target.translation", "res://csv/buffs_effect.modifier.translation", "res://csv/buffs_effect.strength.translation", "res://csv/buffs_effect.damage.translation", "res://csv/buffs_effect.scale.translation", "res://csv/buffs_effect.列1.translation", "res://csv/buffs_effect.列2.translation", "res://csv/buffs_effect.列3.translation", "res://csv/buffs_effect.列4.translation", "res://csv/buffs_effect.列5.translation"]
+
+[params]
+
+compress=true
+delimiter=0

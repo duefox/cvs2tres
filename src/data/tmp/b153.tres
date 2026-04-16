@@ -1,0 +1,22 @@
+[gd_resource type="Resource" script_class="StatusEffectData" load_steps=5 format=3 uid="uid://bdgjyfwypbw2n"]
+
+[ext_resource type="Texture2D" uid="uid://d2vfa5d3upr0f" path="res://assets/stats.png" id="1_0qtht"]
+[ext_resource type="Script" uid="uid://dkxxf21gkkhr4" path="res://resource/core/types/status_effect_data.gd" id="2_sfw84"]
+[ext_resource type="Script" uid="uid://7jypaqh1s6xd" path="res://resource/core/types/skill_resource_change.gd" id="3_ukqae"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0qtht"]
+atlas = ExtResource("1_0qtht")
+region = Rect2(64, 0, 32, 32)
+
+[resource]
+script = ExtResource("2_sfw84")
+item_id = &"b153"
+private_name = "poison"
+nickname = "b153_title"
+descrip = "b153_descp"
+icon = SubResource("AtlasTexture_0qtht")
+effect_type = 6
+stack_decay_per_turn = 1
+target_attribute = "hit_points"
+modifier_type = 1
+strength_value = 10.0
